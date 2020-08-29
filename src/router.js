@@ -9,9 +9,12 @@ import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 import Inbox from "./dashboard/inbox";
 import SettingsAndPrivacy from "./dashboard/settings-and-privacy";
+import { Route, Routes } from "react-router";
 
 /*Routes is used to be Switch*/
 const Router = () => {
+  return <>Two ways of writing routes here</>;
+  /* object-based routes
   return useRoutes([
     { path: "/", element: <LandingPage /> },
     { path: "games", element: <Games /> },
@@ -27,8 +30,8 @@ const Router = () => {
     },
     { path: "*", element: <NotFound /> },
   ]);
-
-  /*
+  */
+  /* nesting routes
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
