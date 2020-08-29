@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardDefaultContent from "./dashboard/dashboard-default-content";
 
-import { Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Games from "./pages/game/Games";
 import GameDetails from "./pages/game/GameDetails";
 import Dashboard from "./dashboard/Dashboard";
@@ -12,6 +12,23 @@ import SettingsAndPrivacy from "./dashboard/settings-and-privacy";
 
 /*Routes is used to be Switch*/
 const Router = () => {
+  return useRoutes([
+    { path: "/", element: <LandingPage /> },
+    { path: "games", element: <Games /> },
+    { path: "game-details/:id", element: <GameDetails /> },
+    {
+      path: "dashboard",
+      element: <Dashboard />,
+      children: [
+        { path: "/", element: <DashboardDefaultContent /> },
+        { path: "inbox", element: <Inbox /> },
+        { path: "settings-and-privacy", element: <SettingsAndPrivacy /> },
+      ],
+    },
+    { path: "*", element: <NotFound /> },
+  ]);
+
+  /*
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
@@ -25,5 +42,6 @@ const Router = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
+  */
 };
 export default Router;
