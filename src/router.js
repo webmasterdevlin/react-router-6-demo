@@ -1,4 +1,6 @@
 import React from "react";
+import DashboardDefaultContent from "./dashboard/dashboard-default-content";
+
 import { Routes, Route } from "react-router-dom";
 import Games from "./pages/game/Games";
 import GameDetails from "./pages/game/GameDetails";
@@ -6,7 +8,6 @@ import Dashboard from "./dashboard/Dashboard";
 import NotFound from "./pages/NotFound";
 import LandingPage from "./pages/LandingPage";
 import Inbox from "./dashboard/inbox";
-import DashboardDefaultContent from "./dashboard/dashboard-default-content";
 import SettingsAndPrivacy from "./dashboard/settings-and-privacy";
 
 /*Routes is used to be Switch*/
