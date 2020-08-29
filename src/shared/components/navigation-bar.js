@@ -30,7 +30,7 @@ export default function NavigationBar() {
           <Typography variant="h6" className={classes.title}>
             <Link
               onClick={() => setLogin(true)}
-              to="dashboard"
+              to="/dashboard"
               className={classes.link}
             >
               {!login ? "Login" : "Dashboard"}

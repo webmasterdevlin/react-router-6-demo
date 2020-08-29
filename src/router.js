@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  Link,
-  Outlet,
-  useParams,
-  BrowserRouter,
-} from "react-router-dom";
-import NavigationBar from "./shared/components/navigation-bar";
+import { Routes, Route } from "react-router-dom";
 import Games from "./pages/game/Games";
 import GameDetails from "./pages/game/GameDetails";
 import Dashboard from "./dashboard/Dashboard";
@@ -16,6 +8,7 @@ import LandingPage from "./pages/LandingPage";
 import Inbox from "./dashboard/inbox";
 import DashboardDefaultContent from "./dashboard/dashboard-default-content";
 import SettingsAndPrivacy from "./dashboard/settings-and-privacy";
+
 /*Routes is used to be Switch*/
 const Router = () => {
   return (
