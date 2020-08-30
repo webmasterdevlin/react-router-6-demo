@@ -13,7 +13,7 @@ import { Route, Routes } from "react-router";
 
 /*Routes is used to be Switch*/
 const Router = () => {
-  return <>Two ways of writing routes here</>;
+  return <>Two ways of writing routes here. Uncomment each.</>;
   /* object-based routes
   return useRoutes([
     { path: "/", element: <LandingPage /> },
@@ -26,11 +26,12 @@ const Router = () => {
         { path: "/", element: <DashboardDefaultContent /> },
         { path: "inbox", element: <Inbox /> },
         { path: "settings-and-privacy", element: <SettingsAndPrivacy /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
     { path: "*", element: <NotFound /> },
   ]);
-  */
+*/
   /* nesting routes
   return (
     <Routes>
@@ -41,10 +42,11 @@ const Router = () => {
         <Route path="/" element={<DashboardDefaultContent />} />
         <Route path="inbox" element={<Inbox />} />
         <Route path="settings-and-privacy" element={<SettingsAndPrivacy />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
-  */
+ */
 };
 export default Router;

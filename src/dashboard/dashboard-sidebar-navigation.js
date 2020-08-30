@@ -17,7 +17,7 @@ const DashboardSidebarNavigation = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    alert("Rendering Dashboard Sidebar Navigation");
+    // alert("Rendering Dashboard Sidebar Navigation");
   }, []);
 
   return (
