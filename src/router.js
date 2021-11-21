@@ -16,12 +16,15 @@ const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="games" element={<Games />} />
-      <Route path="game-details/:id" element={<GameDetails />} />
-      <Route path="dashboard" element={<Dashboard />}>
-        <Route path="/" element={<DashboardDefaultContent />} />
-        <Route path="inbox" element={<Inbox />} />
-        <Route path="settings-and-privacy" element={<SettingsAndPrivacy />} />
+      <Route path="/games" element={<Games />} />
+      <Route path="/game-details/:id" element={<GameDetails />} />
+      <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard/" element={<DashboardDefaultContent />} />
+        <Route path="/dashboard/inbox" element={<Inbox />} />
+        <Route
+          path="/dashboard/settings-and-privacy"
+          element={<SettingsAndPrivacy />}
+        />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="*" element={<NotFound />} />
